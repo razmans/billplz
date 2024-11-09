@@ -12,17 +12,14 @@ export async function CreateBillplz(payload: CreateBillPayload): Promise<any> {
   const mainPayload = { ...payload, id: '' };
 
   try {
-    const response = await fetch(
-      `https://www.billplz-sandbox.com/api/v3/bills`,
-      {
-        method: 'POST',
-        body: JSON.stringify(mainPayload),
-        headers: {
-          Authorization: `Basic ${basicAuthToken}`,
-          'Content-Type': 'application/json'
-        }
+    const response = await fetch(`https://www.billplz.com/api/v3/bills`, {
+      method: 'POST',
+      body: JSON.stringify(mainPayload),
+      headers: {
+        Authorization: `Basic ${basicAuthToken}`,
+        'Content-Type': 'application/json'
       }
-    );
+    });
 
     if (!response.ok) {
       // If the response has an error status code, log the status and statusText for troubleshooting
@@ -50,7 +47,7 @@ export async function DeleteBillplz(payload: BillDataPayload): Promise<any> {
 
   try {
     const response = await fetch(
-      `https://www.billplz-sandbox.com/api/v3/bills/${payload.billplzId}`,
+      `https://www.billplz.com/api/v3/bills/${payload.billplzId}`,
       {
         method: 'DELETE',
         headers: {
@@ -88,7 +85,7 @@ export async function CheckBillplzStatus(
 
   try {
     const response = await fetch(
-      `https://www.billplz-sandbox.com/api/v3/bills/${payload.billplzId}`,
+      `https://www.billplz.com/api/v3/bills/${payload.billplzId}`,
       {
         method: 'GET',
         headers: {
@@ -123,7 +120,6 @@ export async function GetTransactionListBillplz(
 ): Promise<any> {
   const username = payload.id;
   const basicAuthToken = btoa(`${username}:`);
-  // https://www.billplz.com/api/v3/bills/{BILL_ID}/transactions
   try {
     const response = await fetch(
       `https://www.billplz.com/api/v3/bills/${payload.billplzId}/transactions`,
