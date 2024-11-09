@@ -2,6 +2,8 @@
 
 A TypeScript API wrapper for Billplz's billing and transaction API, enabling users to create, delete, and check bills and transactions.
 
+Based on Billplz V3 API: https://www.billplz.com/api#v3-bills
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
