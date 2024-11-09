@@ -18,8 +18,29 @@ A TypeScript API wrapper for Billplz's billing and transaction API, enabling use
 
 Install the required dependencies by adding them to your project.
 
+### NPM
 ```bash
-npm install
+npx jsr add @razmans/billplz
+```
+
+### DENO
+```bash
+deno add jsr:@razmans/billplz
+```
+
+### YARN
+``` bash
+yarn dlx jsr add @razmans/billplz
+```
+
+### PNPM
+``` bash
+pnpm dlx jsr add @razmans/billplz
+```
+
+### BUN
+``` bash
+bunx jsr add @razmans/billplz
 ```
 
 ## Usage
