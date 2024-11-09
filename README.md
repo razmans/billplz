@@ -64,7 +64,7 @@ const billData: CreateBillPayload = {
   callback_url: 'https://yourwebsite.com/your-callback-url',
   redirect_url: 'https://yourwebsite.com/redirect-url'
 };
-
+//To use sandbox version, use CreateBillplzTest
 CreateBillplz(billData).then(response => {
   console.log('Bill created:', response);
 }).catch(error => {
@@ -83,7 +83,7 @@ const billData: BillDataPayload = {
   id: 'your-billplz-id-xxxx-xxxx',
   billplzId: 'your-collection-id',
 };
-
+//To use sandbox version, use DeleteBillplzTest
 DeleteBillplz(billData).then(response => {
   console.log('Bill deleted:', response);
 }).catch(error => {
@@ -102,7 +102,7 @@ const billData: BillDataPayload = {
   id: 'your-billplz-id-xxxx-xxxx',
   billplzId: 'your-collection-id',
 };
-
+//To use sandbox version, use CheckBillplzStatusTest
 CheckBillplzStatus(billData).then(response => {
   console.log('Bill status:', response);
 }).catch(error => {
@@ -121,7 +121,7 @@ const billData: BillDataPayload = {
   id: 'your-billplz-id-xxxx-xxxx',
   billplzId: 'your-collection-id',
 };
-
+//To use sandbox version, use GetTransactionListBillplzTest
 GetTransactionListBillplz(billData).then(response => {
   console.log('Transaction list:', response);
 }).catch(error => {
